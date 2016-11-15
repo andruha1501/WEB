@@ -1,0 +1,524 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/utilities/sprites";
+$icons-spacing: 70px;
+@import "icons/*.png";
+$main-col: #71c46b;
+$hover-col: #4fb448;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+header {
+	background: #fff;
+	width: 100%;
+	z-index: 100;
+	border-bottom: 3px solid $main-col;
+	img {
+		    margin: 9px 0;
+	}
+	a {
+		color: #424242;
+	}
+
+}
+
+#touch_menu{
+	cursor: pointer;
+    display:none;
+    font-size: 40px;
+    color: $main-col;
+    margin-top: 21px;
+}
+
+
+
+.navv {
+	margin: 18px 0 0 80px;
+	text-align: justify;	
+	li {
+		vertical-align: middle;	
+		font-size: 16px;
+		 padding: 10px 16px;
+		border: 1px solid transparent ;
+		&:hover {
+			border: 1px solid $hover-col;
+			border-radius: 5px;
+			a {
+				color: $hover-col;
+
+			}		
+
+		}
+		a{
+			&:before {
+			content: '#';
+			color: $hover-col;
+				}
+				&:link {
+					text-decoration: none;	
+						
+				}
+		}
+
+	}
+
+	&:after {
+		display: inline-block;
+		 width: 100%;
+	}
+	
+}
+
+.logo {
+	display: inline-block;
+	float: left;
+	font-size: 26px;
+	margin-top: 22px;
+	margin-left: 20px;
+	margin: 22px 25px 0;
+	&:before {
+		content: '#';
+			color: $hover-col;
+	}
+}
+
+
+.cover {	
+	background: url(../img/background.jpg) center top no-repeat;
+	background-size: cover;
+	min-height: 765px;
+
+}
+
+.mask {
+	 background-color:rgba(0,0,0,.5);
+    height:100%;
+    width:100%;
+    padding-bottom: 59px;
+
+}
+
+
+
+
+.title {
+	margin-right: 60px;
+	margin-top: 120px;
+	font-size: 36px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 1.3;
+	letter-spacing: 2px;
+
+
+}
+
+.descr {
+	color: #fff;
+	margin-right: 60px;
+	line-height: 1.5;
+	margin-top: 40px;
+}
+
+.butt {
+	width: 135px;
+	height: 45px;
+	background: $main-col;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #fff;
+	margin-right: 60px;
+    margin-top: 101px;
+}
+
+.down-arrow {
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	border-radius: 50%;
+	img {
+		margin-top: 26px;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.right-side {
+	margin-top: 120px;	
+	color: #fff;	
+	padding-right: 165px;	
+}
+
+.left-side {
+	padding-left: 123px;
+}
+
+.right-descr {
+	padding-left: 110px;
+	margin-bottom: 50px;
+	h6 {
+		font-size: 26px;
+		margin-bottom: 10px;
+		&:before {
+			content: '#';
+			color: $hover-col;
+		}
+	}
+	p {
+		font-size: 13px;
+
+	}
+	&:nth-child(1) {
+		@include icons-sprite(icon1);
+	}
+	&:nth-child(2) {
+		@include icons-sprite(icon2);
+	}
+	&:nth-child(3) {
+		@include icons-sprite(icon3);
+		background-position-x: 33px;
+	}
+	&:nth-child(4) {
+		@include icons-sprite(icon4);
+		background-position-x: 24px;
+	}
+}
+
+.portfolio-h {
+	font-size: 36px;
+	text-align: right;
+	margin: 30px 0;
+	margin-right: 15px;
+	text-align: center;
+	&:before {
+			content: '#';
+			color: $hover-col;
+		}
+}
+
+.portfolio-p {
+	font-size: 20px;
+	margin-top: 40px;
+	margin-left: 15px;
+	color: #424242;
+}
+.variable-width {
+	img {
+		height: 360px;
+		outline: none;
+	}
+}
+
+.slick-next, .slick-prev {
+	width: 60px;
+	height: 60px;
+	border: none;
+	border-radius: 50%;
+	outline: none;
+	position: absolute;
+	z-index: 2;
+	background-color: #fff;
+}
+.slick-prev {
+	top: 150px;
+	left: 20px;
+	@include icons-sprite(icon6);
+	background-position: 21px -626px;
+}
+
+.slick-next {
+	right: 20px;
+	top: 150px;
+	@include icons-sprite(icon7);
+    background-position: 24px -722px;
+
+}
+
+
+.review {
+	background: #f3f3f3;
+}
+.info {
+	img {
+		width: 60px;
+		border-radius: 50%;
+		margin: 40px 20px 30px 40px;
+		float: left;
+	}
+	h2 {
+		font-size: 16px;
+		margin-top: 50px;	
+	}
+
+	h3 {
+		font-size: 13px;
+		margin-top: 5px;	
+		color: #424242;
+	}
+}
+
+.box {
+	position: relative;
+	background-color: #fff;
+	@include icons-sprite(quotes);
+	background-position: 331px -864px;
+	border-radius: 5px;
+	padding:35px 40px;
+	font-size: 14px;
+	line-height: 1.8;
+	-webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.24);
+	&:after {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: 20px solid transparent;
+	    border-right: 20px solid transparent;
+	    border-top: 21px solid #fff;
+	    position: absolute;
+	    bottom: -20px;
+	    left: 51px;
+
+ }
+}
+.locations {
+	position: absolute;
+	top: 58px;
+
+}
+.location1, .location2, .location3  {
+	width: 285px;
+	padding: 10px 25px;	
+	margin: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #fff;
+	@include icons-sprite(icon7);
+	background-position: 250px -690px;
+	line-height: 1.4;
+	h1 {
+		font-size: 20px;
+	}
+}
+
+.location3 {
+	@include icons-sprite(icon7);
+	background-position: 250px -701px;
+}
+.active {
+	background-color: #00B33C;
+	color: #fff;
+}
+
+.address {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.number {
+	font-size: 18px;
+}
+
+.map {
+		margin: 60px 0;	
+		width: 100%;
+		height: 425px;
+}
+
+.right-box {
+	margin-top: 115px;	
+	margin-left: 30px;	
+	h1 {
+		margin-bottom: 20px;	
+		font-size: 36px;
+		&:before {
+			content: '#';
+			color: $hover-col;
+		}
+	}
+	p {
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	input {
+		width: 100%;	
+		height: 40px;	
+		border: 1px solid #ccc;	
+		border-radius: 5px;	
+		padding-left: 20px;	
+		outline: none;
+		margin: 8px 0;
+	}
+	input[type="submit"] {
+		width: 126px;
+		padding: 0;
+		text-transform: uppercase;
+		font-size: 14px;
+		text-align: center;
+		float: left !important;
+
+	}
+	a {
+		color: $hover-col;
+		 font-size: 12px;
+		text-decoration: underline;
+		float: right;
+	    margin-top: 18px;
+	}
+}
+
+.time {
+	font-size: 48px;
+	color: $main-col;
+	vertical-align:middle;	
+	margin-right: 10px;
+}
+
+footer {
+	background: #424242;
+	p {
+		float: left;
+		font-size: 14px;
+		margin: 32px 0;
+		color: #fff;
+	}
+}
+.social {
+	i {
+		margin-top: 30px ;
+		color: #fff;
+		font-size: 18px;
+		padding-left: 17px;
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	.logo {
+		float: none;
+	}
+	.my{
+        display:none;
+    }
+     #touch_menu{
+        display:block;
+        float:right;
+    }
+
+    .navv {
+    	li {
+    		display: list-item;	
+    	}
+    }
+
+    .left-side {
+	    padding-left: 0;	
+	}
+
+	.title, .descr {
+		text-align: center;	
+		margin-right: 0;	
+	}
+	.butt {
+		float: none !important;
+		display: block;	
+		margin: 0 auto;
+		margin-top: 30px;	
+	}
+
+	.right-side {
+		margin-top: 80px;
+		padding-right: 0;		
+	}
+	.portfolio-h {
+		margin-right: -17px;
+		clear: both;
+	}
+	.info {
+		img {
+			clear: both;
+		}
+
+		h3 {
+			margin-bottom: 50px;	
+		}
+	}
+
+
+	
+}
+@media screen and (max-width:992px) and (min-width: 768px){
+	.locations {
+	    top: 115px;
+	}
+}
+@media screen and (max-width:1200px) and (min-width: 992px){
+	.navv {
+		li {
+			padding: 10px 9px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.portfolio-p {
+		margin-left: 0;	
+		margin-top: 30px;
+		text-align: center;	
+		
+	}
+	.right-box {
+	    margin-top: 30px;
+	    margin-left: 0;
+	    text-align: center;	
+	    input[type="submit"] {
+    		width: 100%;
+		}
+		a {
+			float: none;
+		}
+	}
+	footer {
+		p {
+			float: none;
+			text-align: center;	
+			margin: 17px 0;
+			margin-bottom: 5px;	
+		}
+	}
+	.social {
+		width: 115px;	
+		float: none !important;
+		margin: 0 auto 10px;	
+
+		i {
+			margin-top: 11px;	
+		}
+	}
+	.slick-prev,.slick-next {
+    		visibility: hidden;
+		}
+	.location1, .location2, .location3 {
+		width: 255px;
+		background-position: 236px -690px;
+	}
+	.location3 {
+		 		   background-position: 236px -701px;
+	}
+}
+
+
